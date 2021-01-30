@@ -20,7 +20,7 @@ export default function App() {
           </ul>
         </nav>
         <Switch>
-          <Route exact path="/" component={Products} />
+          <Route path="/" component={Products} />
           <Route exact path="/checkout" component={Cart} />
         </Switch>
       </div>

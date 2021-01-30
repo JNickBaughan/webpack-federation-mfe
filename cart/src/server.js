@@ -17,7 +17,7 @@ server.get("/", (_, res) => {
   <html>
     <head></head>
     <body>
-    <div id="cart-container" />
+    <div id="cart-container-dev" />
       <script src="/main.js"></script>
     </body>
   </html>
