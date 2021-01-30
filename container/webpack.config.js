@@ -8,7 +8,25 @@ module.exports = {
       name: "container",
       remotes: {
         cart: "cart@http://localhost:3001/remoteEntry.js",
+        products: "products@http://localhost:3002/remoteEntry.js",
       },
     }),
   ],
+  resolve: {
+    extensions: [".js", ".jsx", ".json"],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+      },
+      {
+        test: /\.png|jpg$/,
+        exclude: /node_modules/,
+        loader: "file-loader",
+      },
+    ],
+  },
 };

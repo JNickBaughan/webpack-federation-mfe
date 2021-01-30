@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-let PORT = 3000;
+let PORT = 3002;
 
 let server = express();
 const middlewares = [
@@ -17,8 +17,9 @@ server.get("/", (_, res) => {
   <html>
     <head></head>
     <body>
-      <div id="root" />
+    <div id="products-container" />
       <script src="/main.js"></script>
+    </body>
   </html>
 `);
 });
