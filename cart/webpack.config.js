@@ -17,4 +17,24 @@ module.exports = {
       },
     }),
   ],
+  resolve: {
+    extensions: [".js", ".jsx", ".json"],
+  },
+  devServer: {
+    historyApiFallback: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+      },
+      {
+        test: /\.png|jpg$/,
+        exclude: /node_modules/,
+        loader: "file-loader",
+      },
+    ],
+  },
 };
